@@ -1,0 +1,29 @@
+.searched-weather {
+    display: flex;
+    width: 635px;
+    height: 480px;
+    padding: 47px 76px 50px 76px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.searched-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 49px;
+}
+
+.city-info {
+    display: flex;
+    width: 248px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.city-info img {
+    width: 107px;
+    height: 107px;
+    aspect-ratio: 1/1;
+}
