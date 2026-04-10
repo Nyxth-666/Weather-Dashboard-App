@@ -1,0 +1,31 @@
+.searchcontainer {
+    width: 1296px;
+    height: 89px;
+    top: 25px;
+    left: 72px;
+    padding: 25px 54px 20px 54px;
+    gap: 10px;
+    opacity: 1;
+    border-radius: 30px;
+    background: #101D2F;
+    margin: 25px 25px 54px 40px;
+    box-shadow: 0px 10px 13px 0px #00000059;
+
+;}
+
+.cloudlogo{
+    position: absolute;
+    width: 55px;
+    height: 49px;
+    flex-shrink: 0;
+}
+
+.searchelements {
+    position: relative;
+    display: flex;
+    width: 1187px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}    
