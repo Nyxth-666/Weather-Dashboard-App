@@ -86,7 +86,9 @@ function Component4() {
 
   if (isLoading) {
     return (
-      <div className="weekly-forecast-container box">Loading forecast...</div>
+      <div className="weekly-forecast-container state box">
+        Loading forecast...
+      </div>
     );
   }
 
@@ -94,7 +96,7 @@ function Component4() {
     return (
       <div className="weekly-forecast-container box">
         <div className="weekly-forecast-error">
-          <p>⚠️ {errorMsg}</p>
+          <p className="state box">⚠️ {errorMsg}</p>
           <p style={{ fontSize: "11px", opacity: 0.7, marginTop: "4px" }}>
             Check if your API key is active at openweathermap.org
           </p>
