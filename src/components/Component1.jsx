@@ -78,14 +78,7 @@ const Component1 = ({ city }) => {
               <div className="info-label">
                 <div className="loc-date">
                   <label className="city">{weatherData.name}, PH</label>
-                  <label className="date">
-                    {new Date().toLocaleDateString("en-US", {
-                      weekday: "long",
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </label>
+                  <label className="date">{new Date().toDateString()}</label>
                 </div>
                 <div className="temp-label">
                   <label className="temp">
