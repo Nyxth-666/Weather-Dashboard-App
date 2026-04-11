@@ -1,3 +1,10 @@
+.state {
+    font-size: 40px;
+    font-weight: 700;
+    align-self: center;
+    justify-self: center;
+}
+
 .searched-weather {
     display: flex;
     width: 635px;
