@@ -1,0 +1,161 @@
+.weekly-forecast-container {
+  background-color: #0f172a;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+
+.weekly-forecast-title {
+  color: #e2e8f0;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.3px;
+}
+
+
+.weekly-forecast-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+
+.forecast-day-card {
+  background: #35537D 100%;
+  border: 1px solid #35537D;
+  border-radius: 12px;
+  padding: 20px 16px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.forecast-day-card:hover {
+  background: linear-gradient(145deg, #334155 0%, #475569 100%);
+  border-color: #35537D;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+.forecast-day-name {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+
+.forecast-day-icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.forecast-day-card:hover .forecast-day-icon {
+  transform: scale(1.1);
+}
+
+
+.forecast-day-temp {
+  color: #f1f5f9;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+
+.weekly-forecast-loading {
+  color: #94a3b8;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.weekly-forecast-error {
+  color: #f87171;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgba(248, 113, 113, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .weekly-forecast-container {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
+  
+  .weekly-forecast-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .forecast-day-card {
+    min-width: 100px;
+    padding: 18px 14px;
+  }
+  
+  .forecast-day-icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .forecast-day-temp {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weekly-forecast-container {
+    padding: 16px;
+    margin: 16px auto;
+  }
+  
+  .weekly-forecast-list {
+    gap: 12px;
+  }
+  
+  .forecast-day-card {
+    min-width: 85px;
+    padding: 16px 12px;
+    gap: 10px;
+  }
+  
+  .forecast-day-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .forecast-day-temp {
+    font-size: 15px;
+  }
+  
+  .forecast-day-name {
+    font-size: 10px;
+  }
+}
