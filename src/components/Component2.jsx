@@ -3,6 +3,7 @@ import "../styles/Component2.css";
 const Component2 = () => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
+  const [error, setError] = useState('');
 
   const API_KEY = "YOUR_API_KEY";
 
