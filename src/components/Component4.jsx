@@ -85,12 +85,14 @@ function Component4() {
   }
 
   if (isLoading) {
-    return <div className="weekly-forecast-container">Loading forecast...</div>;
+    return (
+      <div className="weekly-forecast-container box">Loading forecast...</div>
+    );
   }
 
   if (errorMsg) {
     return (
-      <div className="weekly-forecast-container">
+      <div className="weekly-forecast-container box">
         <div className="weekly-forecast-error">
           <p>⚠️ {errorMsg}</p>
           <p style={{ fontSize: "11px", opacity: 0.7, marginTop: "4px" }}>
@@ -102,12 +104,12 @@ function Component4() {
   }
 
   return (
-    <div className="weekly-forecast-container">
+    <div className="weekly-forecast-container box">
       <h2 className="weekly-forecast-title">This Week</h2>
 
       <div className="weekly-forecast-list">
         {weatherDays.map((day, index) => (
-          <div key={index} className="forecast-day-card">
+          <div key={index} className="forecast-day-card card">
             <span className="forecast-day-name">{getDayName(day.dt)}</span>
 
             <img
