@@ -37,9 +37,18 @@ function Component3() {
     return days[new Date().getDay()];
   };
 
-  return (
+    return (
+      
     <div className="card">
-      {weather && weather.main ? (
+      <input
+        type="text"
+        placeholder="Enter city"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+      />
+      <button onClick={getWeather}>Search</button>
+
+      {weather && weather.main && (
         <div>
           <p>{getDay()}</p>
           <h3>{weather.name}</h3>
