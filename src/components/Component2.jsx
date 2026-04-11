@@ -10,7 +10,7 @@ const Component2 = () => {
     if (!city) return;
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
       );
       const data = await response.json();
       setWeather(data);
@@ -42,7 +42,7 @@ const Component2 = () => {
             value={city}
             onChange={handleInputChange}
             />
-
+          
         
           <div className="search-logo"></div>
           <div className="input-box"></div>
