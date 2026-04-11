@@ -1,16 +1,99 @@
-# React + Vite
+# 🌦️ Weather Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern weather dashboard application that provides real-time weather data based on user location or searched city. Built with a focus on usability, clean UI, and dynamic data handling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👥 Group Information
 
-## React Compiler
+**Group #1**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👑 Leader
 
-## Expanding the ESLint configuration
+- **Joshua Barotea**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 👨‍💻 Members
+
+- Mamac, John Michael L.
+- Pronton, Jonel P.
+- San Agustin, Jhonas C.
+- Seco, Cielo G.
+- Bautista, Alma M.
+- Orte, James Miro R.
+- Endozo, Christian Jay C.
+- Metran, Rafael L.
+- Aguilera, John Kevin F.
+- Dalumpienes, Geoffrey Beene P.
+- Bermudez, Rommel Gio C.
+- Esguerra, Nathaniel L.
+
+---
+
+## 🚀 Features
+
+- 🔍 Search weather by city name
+- 🌡️ Real-time temperature, humidity, wind speed, and “feels like”
+- 🌥️ Dynamic weather icons based on conditions
+- ⚡ Fast and responsive UI
+
+---
+
+## 🛠️ Technologies Used
+
+- **React (Vite)**
+- **JavaScript (ES6+)**
+- **CSS3**
+- **OpenWeatherMap API**
+
+---
+
+## 🔗 Project Repository
+
+👉 [View on GitHub](https://github.com/Nyxth-666/Weather-Dashboard-App.git)
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Nyxth-666/Weather-Dashboard-App.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd Weather-Dashboard-App
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file and add your API key:
+
+   ```env
+   VITE_WEATHER_API_KEY=your_api_key_here
+   ```
+
+5. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📌 Notes
+
+- Make sure you have a valid API key from OpenWeatherMap.
+- Allow location access in your browser for automatic weather detection.
+
+---
+
+## 📄 License
+
+This project is for educational purposes only.
