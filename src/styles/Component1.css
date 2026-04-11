@@ -86,6 +86,7 @@
     gap: 10px;
     border-radius: 15px;
     background: #35537D;
+    transition: background 0.3s ease, border-color 0.3s ease, transform, box-shadow 0.3s ease;
 }
 
 .stat-box p {

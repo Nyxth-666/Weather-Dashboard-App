@@ -30,7 +30,7 @@ const Component1 = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const API_KEY = import.meta.env.VITE_WEATHER_APP_KEY;
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   const fetchApiWeather = async (query) => {
     if (!query.trim()) return;
@@ -83,15 +83,15 @@ const Component1 = () => {
             </div>
 
             <div className="city-stats">
-              <div className="stat-box">
+              <div className="stat-box card">
                 <p className="stat-title">HUMIDITY</p>
                 <h3>{weatherData.main.humidity}%</h3>
               </div>
-              <div className="stat-box">
+              <div className="stat-box card">
                 <p className="stat-title">WIND</p>
                 <h3>{weatherData.wind.speed} m/s</h3>
               </div>
-              <div className="stat-box">
+              <div className="stat-box card">
                 <p className="stat-title">FEELS LIKE</p>
                 <h3>{Math.round(weatherData.main.feels_like)}°C</h3>
               </div>
