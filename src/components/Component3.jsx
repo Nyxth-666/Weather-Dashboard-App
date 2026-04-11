@@ -34,8 +34,10 @@ function Component3() {
     return days[new Date().getDay()];
   };
 
-  return (
+    return (
+      
     <div className="card">
+        <p>Hot dog</p>
       <input
         type="text"
         placeholder="Enter city"
