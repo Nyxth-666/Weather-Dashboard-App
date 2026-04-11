@@ -1,6 +1,10 @@
 import "../styles/Component2.css";
 
 const Component2 = () => {
+    const [city, setCity] = useState("");
+    const [weather, setWeather] = useState(null);
+    const [error, setError] = useState('');
+
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState('');
@@ -15,7 +19,7 @@ const Component2 = () => {
       );
       const data = await response.json();
       setWeather(data);
-    } catch (err) {
+    } catch (err) {  
       setError(err.message);
       setWeather(null);
       console.error("Error fetching weather data:", error);
@@ -30,7 +34,6 @@ const Component2 = () => {
     e.preventDefault();
     fetchWeather();
   };
-
   return (
     <div className="search-container box">
       <div className="search-elements">
