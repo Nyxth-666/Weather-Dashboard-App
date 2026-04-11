@@ -1,16 +1,23 @@
+import { useState } from "react";
 import Component1 from "./components/Component1";
 import Component2 from "./components/Component2";
 import Component4 from "./components/Component4";
 import "./App.css";
 
 const App = () => {
+  const [city, setCity] = useState("");
+
+  const handleSearch = (searchCity) => {
+    setCity(searchCity);
+  };
+
   return (
     <>
       <div className="main-app">
         <div className="app-wrapper">
-          <Component2 />
+          <Component2 onSearch={handleSearch} />
           <div className="app-info">
-            <Component1 />
+            <Component1 city={city} />
           </div>
           <Component4 />
         </div>

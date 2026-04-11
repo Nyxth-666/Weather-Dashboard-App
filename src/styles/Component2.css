@@ -1,4 +1,5 @@
 .search-container {
+    display: flex;
     width: 1296px;
     height: 89px;
     padding: 25px 54px 20px 54px;
@@ -9,14 +10,13 @@
 }
 
 .cloud-logo {
-    position: absolute;
     width: 75px;
     height: 49px;
     flex-shrink: 0;
 }
 
 .cloud-logo img {
-    width: fit-content;
+    width: 100%;
     height: 100%;
 }
 
@@ -28,4 +28,27 @@
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.searchbar {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box {
+    display: flex;
+    width: 477px;
+    height: 39px;
+    padding: 5px 255px 4px 13px;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid white;
+    background: none;
+}
+
+.search-button {
+    display: none;
 }

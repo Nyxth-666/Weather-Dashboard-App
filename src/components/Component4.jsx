@@ -17,6 +17,8 @@ function Component4() {
 
   const getWeatherIcon = (main) => {
     switch (main) {
+      case "Thunderstorm":
+        return RainIcon;
       case "Clear":
         return ClearIcon;
       case "Clouds":
@@ -115,17 +117,9 @@ function Component4() {
             <span className="forecast-day-name">{getDayName(day.dt)}</span>
 
             <img
-              src={
-                day.weather?.[0]?.icon
-                  ? `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
-                  : "https://openweathermap.org/img/wn/04d@2x.png"
-              }
-              alt={day.weather?.[0]?.description || "weather"}
+              src={getWeatherIcon(day.main)}
+              alt={day.main || "Weather"}
               className="forecast-day-icon"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "https://openweathermap.org/img/wn/04d@2x.png";
-              }}
             />
 
             <span className="forecast-day-temp">

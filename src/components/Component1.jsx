@@ -7,8 +7,8 @@ import DrizzleIcon from "../assets/drizzle.png";
 import RainIcon from "../assets/rain.png";
 import SnowIcon from "../assets/snow.png";
 
-const Component1 = () => {
-  const weatherIcon = (main) => {
+const Component1 = ({ city }) => {
+  const getWeatherIcon = (main) => {
     switch (main) {
       case "Clear":
         return ClearIcon;
@@ -25,7 +25,6 @@ const Component1 = () => {
     }
   };
 
-  const [searchQuery, setSearchQuery] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -33,7 +32,10 @@ const Component1 = () => {
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   const fetchApiWeather = async (query) => {
-    if (!query.trim()) return;
+    if (!query.trim()) {
+      setWeatherData(null);
+      return;
+    }
     try {
       setLoading(true);
       setError("");
@@ -58,8 +60,8 @@ const Component1 = () => {
   };
 
   useEffect(() => {
-    fetchApiWeather("Manila");
-  }, []);
+    fetchApiWeather(city);
+  }, [city]);
 
   return (
     <>
@@ -69,15 +71,22 @@ const Component1 = () => {
         <div className="searched-weather box">
           <div className="searched-wrapper">
             <div className="city-info">
-              <img src="/src/assets/rain.png" />
+              <img
+                src={getWeatherIcon(weatherData.weather[0].main)}
+                alt="Weather icon"
+              />
               <div className="info-label">
                 <div className="loc-date">
-                  <label className="city">Batangas, PH</label>
-                  <label className="date">Tuesday. April 7, 2026</label>
+                  <label className="city">{weatherData.name}, PH</label>
+                  <label className="date">{new Date().toDateString()}</label>
                 </div>
                 <div className="temp-label">
-                  <label className="temp">29°C</label>
-                  <label className="temp-label">Few Clouds</label>
+                  <label className="temp">
+                    {Math.round(weatherData.main.temp)}°C
+                  </label>
+                  <label className="temp-label">
+                    {weatherData.weather[0].description}
+                  </label>
                 </div>
               </div>
             </div>
@@ -89,7 +98,7 @@ const Component1 = () => {
               </div>
               <div className="stat-box card">
                 <p className="stat-title">WIND</p>
-                <h3>{weatherData.wind.speed} m/s</h3>
+                <h3>{weatherData.wind?.speed || 0} m/s</h3>
               </div>
               <div className="stat-box card">
                 <p className="stat-title">FEELS LIKE</p>
