@@ -42,7 +42,7 @@ const Component2 = () => {
             value={city}
             onChange={handleInputChange}
             />
-            <button type="submit" className="search-logo">Search</button>
+
         
           <div className="search-logo"></div>
           <div className="input-box"></div>
