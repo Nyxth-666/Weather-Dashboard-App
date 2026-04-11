@@ -1,10 +1,13 @@
-import '../styles/Component2.css';
+import "../styles/Component2.css";
 
 const Component2 = () => {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState(null);
     const [error, setError] = useState('');
 
+  const [city, setCity] = useState("");
+  const [weather, setWeather] = useState(null);
+  const [error, setError] = useState('');
 
   const API_KEY = "YOUR_API_KEY";
 
@@ -16,8 +19,8 @@ const Component2 = () => {
       );
       const data = await response.json();
       setWeather(data);
-    } catch (err) {
-      setError(err.message);  
+    } catch (err) {  
+      setError(err.message);
       setWeather(null);
       console.error("Error fetching weather data:", error);
     }
@@ -31,30 +34,28 @@ const Component2 = () => {
     e.preventDefault();
     fetchWeather();
   };
-    return (
-        <div className="searchcontainer">
-            <div className="searchelements">
-                <div className="cloudlogo">
-                    <img src="/src/assets/fi-bs-clouds.png" />
-                </div>
-                 <form className="searchbar" onSubmit={handleSearch}>
-                    <input
+  return (
+    <div className="search-container box">
+      <div className="search-elements">
+        <div className="cloud-logo">
+          <img src="./WeatherLogo.png" alt="Weather Logo" />
+        </div>
+        <div className="searchbar" onSubmit={handleSearch}>
+          <input
             type="text"
             className="input-box"
             placeholder="Enter city..."
             value={city}
             onChange={handleInputChange}
-            
             />
-                 </form>
-                <div className="searchbar">
-                    <div className="searchlogo"></div>
-                    <div className="inputbox"></div>
-                </div>
-            </div>
+          
+        
+          <div className="search-logo"></div>
+          <div className="input-box"></div>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Component2;
-
