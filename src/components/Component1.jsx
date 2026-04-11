@@ -85,15 +85,15 @@ const Component1 = () => {
             <div className="city-stats">
               <div className="stat-box">
                 <p className="stat-title">HUMIDITY</p>
-                <h3>77%</h3>
+                <h3>{weatherData.main.humidity}%</h3>
               </div>
               <div className="stat-box">
                 <p className="stat-title">WIND</p>
-                <h3>1.86 m/s</h3>
+                <h3>{weatherData.wind.speed} m/s</h3>
               </div>
               <div className="stat-box">
                 <p className="stat-title">FEELS LIKE</p>
-                <h3>34°C</h3>
+                <h3>{Math.round(weatherData.main.feels_like)}°C</h3>
               </div>
             </div>
           </div>
