@@ -1,55 +1,61 @@
-<<<<<<< HEAD
-    *{
-=======
-*{
->>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    }
-
-<<<<<<< HEAD
-    .content-container{
-=======
-    .card{
->>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+.card-pic {
     padding: 18px;
     height: 480px;
     width: 635px;
-    background-color: #101d2f;
-    border-radius: 30px;
-    margin-left: 72px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .day-loc{
-<<<<<<< HEAD
-    
-=======
->>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
-    width: 573px;
-    height: 36px;
+.loading,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.day-loc {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    }
-    
-    .temp-container{
+    align-items: center;
+}
+
+.day-loc p {
+    font-size: 24px;
+    color: white;
+}
+
+.day-loc h3 {
+    font-size: 32px;
+    color: white;
+}
+
+.temp-container {
     display: flex;
     justify-content: center;
-    gap: 50px
-    }
+    align-items: center;
+    gap: 50px;
+    flex-grow: 1;
+}
 
-    h1{
-    font-size: 90px}
+.temp-container h1 {
+    font-size: 90px;
+    color: white;
+    margin: 0;
+}
 
-<<<<<<< HEAD
-    
-
-=======
->>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
-    #p2{
+.weather-desc {
     text-align: center;
-    font-size: 45px
-    }
-    #sml{
+    font-size: 45px;
+    color: white;
+    margin: 0;
+}
+
+.feels-like {
     font-size: 15px;
-    text-align: center;}
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
