@@ -4,6 +4,7 @@ import Component2 from "./components/Component2";
 import Component4 from "./components/Component4";
 import "./App.css";
 
+import Component3 from "./components/Component3";
 const App = () => {
   const [city, setCity] = useState("");
 
