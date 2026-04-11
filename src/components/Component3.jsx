@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/component3.css";
 
 function Component3() {
-  const [city, setCity] = useState("lucban");
+  const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
 
   const API_KEY = import.meta.env.VITE_WEATHER_APP_ID;
