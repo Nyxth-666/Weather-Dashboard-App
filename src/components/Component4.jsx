@@ -8,7 +8,7 @@ import RainIcon from "../assets/rain.png";
 import SnowIcon from "../assets/snow.png";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-const CITY = "Batangas";
+const CITY = "Manila";
 
 function Component4() {
   const [weatherDays, setWeatherDays] = useState([]);
