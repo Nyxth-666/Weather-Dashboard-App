@@ -1,0 +1,10 @@
+.main-app {
+    display: flex;
+    margin: 15px 0;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
+}
