@@ -63,8 +63,8 @@ const Component1 = () => {
 
   return (
     <>
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {loading && <p className="state">Loading...</p>}
+      {error && <p className="state">{error}</p>}
       {weatherData && (
         <div className="searched-weather box">
           <div className="searched-wrapper">
