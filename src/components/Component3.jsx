@@ -5,7 +5,6 @@ function Component3() {
 
   const API_KEY = import.meta.env.VITE_WEATHER_APP_ID;
 
-  const DEFAULT_CITY = "Lucena";
   const DEFAULT_CITY = "Lucena City";
 
   const getWeather = async () => {
