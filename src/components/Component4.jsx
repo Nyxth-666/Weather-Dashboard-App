@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Component4.css";
 
-import ClearIcon from '../assets/clear.png';
-import CloudIcon from '../assets/cloud.png';
-import DrizzleIcon from '../assets/drizzle.png';
-import RainIcon from '../assets/rain.png';
-import SnowIcon from '../assets/snow.png';
+import ClearIcon from "../assets/clear.png";
+import CloudIcon from "../assets/cloud.png";
+import DrizzleIcon from "../assets/drizzle.png";
+import RainIcon from "../assets/rain.png";
+import SnowIcon from "../assets/snow.png";
 
-const API_KEY = import.meta.env.VITE_WEATHER_APP_KEY;
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 const CITY = "Batangas";
 
 function Component4() {
@@ -55,7 +55,7 @@ function Component4() {
             dt: item.dt,
             temp: { day: item.main.temp },
             weather: item.weather,
-            main: item.weather[0].main 
+            main: item.weather[0].main,
           }));
 
         setWeatherDays(daily);
