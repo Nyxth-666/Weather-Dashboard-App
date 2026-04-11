@@ -18,6 +18,7 @@ const App = () => {
         <div className="app-wrapper">
           <Component2 onSearch={handleSearch} />
           <div className="app-info">
+            <Component3 />
             <Component1 city={city} />
           </div>
           <Component4 />
