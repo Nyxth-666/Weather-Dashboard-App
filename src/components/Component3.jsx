@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../styles/Component3.css";
 
 function Component3() {
   const [weather, setWeather] = useState(null);
