@@ -37,6 +37,15 @@ const Component2 = () => {
                 <div className="cloudlogo">
                     <img src="/src/assets/fi-bs-clouds.png" />
                 </div>
+                 <form className="searchbar" onSubmit={handleSearch}>
+                    <input
+            type="text"
+            className="input-box"
+            placeholder="Enter city..."
+            value={city}
+            onChange={handleInputChange}
+            />
+                 </form>
                 <div className="searchbar">
                     <div className="searchlogo"></div>
                     <div className="inputbox"></div>
