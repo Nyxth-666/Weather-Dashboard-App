@@ -1,0 +1,41 @@
+    *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+
+    .content-container{
+    padding: 18px;
+    height: 480px;
+    width: 635px;
+    background-color: #101d2f;
+    border-radius: 30px;
+    margin-left: 72px;
+    }
+
+    .day-loc{
+    
+    width: 573px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .temp-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px
+    }
+
+    h1{
+    font-size: 90px}
+
+    
+
+    #p2{
+    text-align: center;
+    font-size: 45px
+    }
+    #sml{
+    font-size: 15px;
+    text-align: center;}

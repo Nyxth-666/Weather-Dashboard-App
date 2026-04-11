@@ -1,7 +1,8 @@
 import { useState } from "react";
+import "../styles/component3.css";
 
 function Component3() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("lucban");
   const [weather, setWeather] = useState(null);
 
   const API_KEY = import.meta.env.VITE_WEATHER_APP_ID;
@@ -48,33 +49,24 @@ function Component3() {
       </div>
 
       {weather && weather.main && (
-        <div class="content">
-          <p id="p1">{getDay()}</p>
-          <h3>{weather.name}</h3>
-          <h1>{Math.round(weather.main.temp)}°C</h1>
+        <div class="content-container">
+          <div class="day-loc">
+              <p id="p1">{getDay()}</p>
+              <h3>{weather.name}</h3>
+          </div>
+          <div class="temp-container">
+              <img src="../src/assets/cloud.png" alt="cloudy" height={"276px"} width={"276px"}/>
+              <h1>{Math.round(weather.main.temp)}°C</h1>
+          </div>
           <p id="p2">{weather.weather[0].main}</p>
           <small id="sml">
-            Feels like {Math.round(weather.main.feels_like)}°C
+            <p>Feels like {Math.round(weather.main.feels_like)}°C</p>
           </small>
         </div>
       )}
             <style>{`
         
-    *{
-        margin: 0%;}
-    .serach-bar{}
 
-    .content{}
-
-    #p1{}
-
-    h3{}
-
-    h1{}
-
-    #p2{}
-
-    #sml{}
     `}</style>
         
     </div>
