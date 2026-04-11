@@ -18,8 +18,7 @@ html {
 body {
     background: linear-gradient(124deg, #094E83 -3.92%, #2797EF 51.81%, #0A4F84 104.41%);
     font-family: "Poppins", sans-serif;
-    line-height: normal;
-    height: 100vh;
+    min-height: 100vh;
     overflow: auto;
     color: white;
 }
