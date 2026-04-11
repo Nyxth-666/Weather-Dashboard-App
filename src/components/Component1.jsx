@@ -1,6 +1,66 @@
+import React from "react";
+import { useState, useEffect } from "react";
 import "../styles/Component1.css";
+import ClearIcon from "../assets/clear.png";
+import CloudIcon from "../assets/cloud.png";
+import DrizzleIcon from "../assets/drizzle.png";
+import RainIcon from "../assets/rain.png";
+import SnowIcon from "../assets/snow.png";
 
 const Component1 = () => {
+  const weatherIcon = (main) => {
+    switch (main) {
+      case "Clear":
+        return ClearIcon;
+      case "Clouds":
+        return CloudIcon;
+      case "Rain":
+        return RainIcon;
+      case "Drizzle":
+        return DrizzleIcon;
+      case "Snow":
+        return SnowIcon;
+      default:
+        return CloudIcon;
+    }
+  };
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [weatherData, setWeatherData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+
+  const fetchApiWeather = async (query) => {
+    if (!query.trim()) return;
+    try {
+      setLoading(true);
+      setError("");
+
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=metric`,
+      );
+
+      const data = await response.json();
+
+      if (data.cod !== 200) {
+        throw new Error(data.message);
+      }
+
+      setWeatherData(data);
+    } catch (err) {
+      setError(err.message);
+      setWeatherData(null);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchApiWeather("Manila");
+  }, []);
+
   return (
     <div className="searched-weather box">
       <div className="searched-wrapper">
