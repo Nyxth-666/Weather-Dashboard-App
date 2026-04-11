@@ -4,11 +4,17 @@ import Component4 from "./components/Component4";
 
 const App = () => {
   return (
-    <div>
-      <Component2 />
-      <Component1 />
-      <Component4 />
-    </div>
+    <>
+      <div className="main-app">
+        <div className="app-wrapper">
+          <Component2 />
+          <div className="app-info">
+            <Component1 />
+          </div>
+          <Component4 />
+        </div>
+      </div>
+    </>
   );
 };
 
