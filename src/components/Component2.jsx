@@ -15,7 +15,9 @@ const Component2 = () => {
       );
       const data = await response.json();
       setWeather(data);
-    } catch (error) {
+    } catch (err) {
+      setError(err.message);
+      setWeather(null);
       console.error("Error fetching weather data:", error);
     }
   };
