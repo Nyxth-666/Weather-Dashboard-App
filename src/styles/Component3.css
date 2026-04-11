@@ -1,0 +1,55 @@
+<<<<<<< HEAD
+    *{
+=======
+*{
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+
+<<<<<<< HEAD
+    .content-container{
+=======
+    .card{
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+    padding: 18px;
+    height: 480px;
+    width: 635px;
+    background-color: #101d2f;
+    border-radius: 30px;
+    margin-left: 72px;
+    }
+
+    .day-loc{
+<<<<<<< HEAD
+    
+=======
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+    width: 573px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .temp-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px
+    }
+
+    h1{
+    font-size: 90px}
+
+<<<<<<< HEAD
+    
+
+=======
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+    #p2{
+    text-align: center;
+    font-size: 45px
+    }
+    #sml{
+    font-size: 15px;
+    text-align: center;}

@@ -1,0 +1,121 @@
+<<<<<<< HEAD
+import { useState } from "react";
+import "../styles/component3.css";
+
+function Component3() {
+  const [city, setCity] = useState("");
+=======
+import { useState, useEffect } from "react";
+import "../styles/Component3.css";
+
+function Component3() {
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+  const [weather, setWeather] = useState(null);
+
+  const API_KEY = import.meta.env.VITE_WEATHER_APP_ID;
+
+<<<<<<< HEAD
+  const getWeather = async () => {
+    if (!city) return;
+
+    try {
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
+=======
+  const DEFAULT_CITY = "Lucena City";
+
+  const getWeather = async () => {
+    try {
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${DEFAULT_CITY}&units=metric&appid=${API_KEY}`
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+      );
+      const data = await res.json();
+
+      if (data.cod !== 200) {
+<<<<<<< HEAD
+        alert(data.message);
+=======
+        console.log(data.message);
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+        return;
+      }
+
+      setWeather(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    getWeather();
+  }, []);
+
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+  const getDay = () => {
+    const days = [
+      "Sunday", "Monday", "Tuesday", "Wednesday",
+      "Thursday", "Friday", "Saturday"
+    ];
+    return days[new Date().getDay()];
+  };
+
+<<<<<<< HEAD
+    return (
+      
+    <div className="card">
+      <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Enter city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <button onClick={getWeather}>Search</button>
+      </div>
+
+      {weather && weather.main && (
+        <div class="content-container">
+          <div class="day-loc">
+              <p id="p1">{getDay()}</p>
+              <h3>{weather.name}</h3>
+          </div>
+          <div class="temp-container">
+              <img src="../src/assets/cloud.png" alt="cloudy" height={"276px"} width={"276px"}/>
+              <h1>{Math.round(weather.main.temp)}°C</h1>
+          </div>
+          <p id="p2">{weather.weather[0].main}</p>
+          <small id="sml">
+            <p>Feels like {Math.round(weather.main.feels_like)}°C</p>
+          </small>
+        </div>
+      )}
+            <style>{`
+        
+
+    `}</style>
+        
+=======
+  return (
+    <div className="card">
+      {weather && weather.main ? (
+        <div>
+          <p>{getDay()}</p>
+          <h3>{weather.name}</h3>
+          <h1>{Math.round(weather.main.temp)}°C</h1>
+          <p>{weather.weather[0].main}</p>
+          <small>
+            Feels like {Math.round(weather.main.feels_like)}°C
+          </small>
+        </div>
+      ) : (
+        <p>Loading weather...</p>
+      )}
+>>>>>>> dc49e67dfba5c7e8ec8a4af9215fbe32b1f119cd
+    </div>
+  );
+}
+
+export default Component3;
