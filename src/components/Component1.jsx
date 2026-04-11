@@ -30,7 +30,7 @@ const Component1 = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+  const API_KEY = import.meta.env.VITE_WEATHER_APP_KEY;
 
   const fetchApiWeather = async (query) => {
     if (!query.trim()) return;
