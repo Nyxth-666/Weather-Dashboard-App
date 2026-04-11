@@ -37,26 +37,46 @@ function Component3() {
     return (
       
     <div className="card">
-        <p>Hot dog</p>
-      <input
-        type="text"
-        placeholder="Enter city"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <button onClick={getWeather}>Search</button>
+      <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Enter city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <button onClick={getWeather}>Search</button>
+      </div>
 
       {weather && weather.main && (
-        <div>
-          <p>{getDay()}</p>
+        <div class="content">
+          <p id="p1">{getDay()}</p>
           <h3>{weather.name}</h3>
           <h1>{Math.round(weather.main.temp)}°C</h1>
-          <p>{weather.weather[0].main}</p>
-          <small>
+          <p id="p2">{weather.weather[0].main}</p>
+          <small id="sml">
             Feels like {Math.round(weather.main.feels_like)}°C
           </small>
         </div>
       )}
+            <style>{`
+        
+    *{
+        margin: 0%;}
+    .serach-bar{}
+
+    .content{}
+
+    #p1{}
+
+    h3{}
+
+    h1{}
+
+    #p2{}
+
+    #sml{}
+    `}</style>
+        
     </div>
   );
 }
