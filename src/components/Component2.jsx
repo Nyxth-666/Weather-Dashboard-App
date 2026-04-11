@@ -44,6 +44,7 @@ const Component2 = () => {
             placeholder="Enter city..."
             value={city}
             onChange={handleInputChange}
+            
             />
                  </form>
                 <div className="searchbar">
