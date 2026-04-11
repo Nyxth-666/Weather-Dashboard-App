@@ -1,11 +1,12 @@
-import Component1 from "./components/Component1";
 
 import Component3 from "./components/Component3";
 const App = () => {
   return (
+    
     <div>
-      <Component1 />
+      <Component3 />
     </div>
+
   );
 };
 
