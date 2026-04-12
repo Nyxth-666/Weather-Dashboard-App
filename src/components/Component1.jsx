@@ -46,10 +46,6 @@ const Component1 = ({ city }) => {
 
       const data = await response.json();
 
-      if (data.cod !== 200) {
-        throw new Error(data.message);
-      }
-
       setWeatherData(data);
     } catch (err) {
       setError(err.message);
