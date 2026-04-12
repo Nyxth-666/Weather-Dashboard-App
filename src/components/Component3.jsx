@@ -41,10 +41,6 @@ const Component3 = () => {
       );
       const data = await res.json();
 
-      if (data.cod !== 200) {
-        throw new Error(data.message);
-      }
-
       setWeather(data);
     } catch (err) {
       setError(err.message);
